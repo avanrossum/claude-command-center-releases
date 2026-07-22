@@ -1,6 +1,27 @@
 {
   "versions": [
     {
+      "version": "0.15.0",
+      "date": "2026-07-22",
+      "critical": false,
+      "features": [
+        "Activity view now leads with the session you're looking at — its full ledger sits at the top, while every other session collapses to a one-line rollup chip (running / failed / done counts) you can click to switch to it.",
+        "Workflow runs show as a single rich entry (name, description, and agent progress like 8/19) instead of a long list of individual agent rows.",
+        "Renamed the pop-out panel from Subagents to Activity, since it now covers shell tasks and workflows too."
+      ]
+    },
+    {
+      "version": "0.14.4",
+      "date": "2026-07-22",
+      "critical": false,
+      "features": [
+        "Activity view: background shell tasks and workflows now appear alongside agents, each with a type badge, and a failed task shows as a quiet awareness row.",
+        "Rail rows show a \"⚙ N\" count of background work running, so a session churning on a build or dev server no longer looks idle.",
+        "Fixed background agents and tasks being marked done the instant they launched — they now reflect real running / done / failed status.",
+        "A completed turn now surfaces as a \"done — your move\" item for sessions you weren't watching, and clears once you open them."
+      ]
+    },
+    {
       "version": "0.14.3",
       "date": "2026-07-22",
       "critical": false,
