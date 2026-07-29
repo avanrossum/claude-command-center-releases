@@ -1,6 +1,18 @@
 {
   "versions": [
     {
+      "version": "0.23.0",
+      "date": "2026-07-29",
+      "critical": false,
+      "features": [
+        "New: Digests \u2014 a panel under the session list for things worth your attention that no session is going to tell you about. Something you write watches whatever you care about on its own schedule and drops a JSON file in a directory; the panel finds it, counts what's unread, and gets out of the way. Sources are discovered rather than configured, so a new one appears without any change to the app.",
+        "Digest items sort by when the thing happened, not when it was noticed \u2014 so a source catching up on a week doesn't read as one busy afternoon. Open one to see its full text with a copy button, dismiss it and it stays gone even though the producer keeps running, or keep it as a working set. The panel folds away and pops out into a floating card like Timeline and Activity.",
+        "This one needs setting up before it does anything: the app ships no producers, deliberately, because it doesn't need to know what your signal means. Writing one is a JSON file in a directory, in whatever language you like \u2014 see docs/digests.md.",
+        "Fixed Shift+Enter silently breaking after switching to a session. It only happened on sessions that had been running a while, which is why it looked random \u2014 the terminal is rebuilt when you switch, and the keyboard mode that makes Shift+Enter a newline had scrolled out of the replayed history. The mode is now restored on every switch.",
+        "Fixed the same problem for pasting. A paste into an affected session lost its bracketing, so a newline inside pasted text was treated as pressing Enter and submitted early."
+      ]
+    },
+    {
       "version": "0.22.1",
       "date": "2026-07-29",
       "critical": false,
