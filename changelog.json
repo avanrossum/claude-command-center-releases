@@ -1,6 +1,14 @@
 {
   "versions": [
     {
+      "version": "0.23.2",
+      "date": "2026-07-29",
+      "critical": false,
+      "features": [
+        "Sessions you deliberately kept no longer disappear after a week. A stopped session aged out of the resumable list after seven days without being launched \u2014 so one you had named and filed into a category simply vanished, with nothing to distinguish it from clutter being cleaned up. Named sessions, and sessions wired into a task tree, are now kept for 90 days. Everything else keeps the shorter window, so the list stays bounded."
+      ]
+    },
+    {
       "version": "0.23.1",
       "date": "2026-07-29",
       "critical": false,
