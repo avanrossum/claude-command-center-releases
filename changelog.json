@@ -1,6 +1,14 @@
 {
   "versions": [
     {
+      "version": "0.22.1",
+      "date": "2026-07-29",
+      "critical": false,
+      "features": [
+        "The dialog that asks permission to pre-authorize mailbox writes now names the rules it actually adds. It described a broader rule than the app has written since v0.20 \u2014 so it asked for more than it took, and the two never matched. What gets written is unchanged: two rules scoped to the mail trees, nothing wider, with your settings file backed up first."
+      ]
+    },
+    {
       "version": "0.22.0",
       "date": "2026-07-29",
       "critical": false,
