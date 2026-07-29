@@ -1,6 +1,24 @@
 {
   "versions": [
     {
+      "version": "0.22.0",
+      "date": "2026-07-29",
+      "critical": false,
+      "features": [
+        "Messages are now a real mailbox. Every message between sessions is recorded the moment it's written, before anything is routed \u2014 so one that can't be delivered still exists, in full, with the reason it's stuck, and it survives a restart. Undelivered payloads also stay on disk under ~/.claude/ccc/mail/spool, so nothing is ever unrecoverable.",
+        "The Messages panel is now each session's own inbox and outbox, ordered by what needs you, with the full text of every message and a copy button. A message that failed can be resent without retyping it, or cancelled.",
+        "You decide which sessions may message each other. A pair can only talk along a link you opened, or the parent\u2013child link you created by spawning it \u2014 no session can open one for itself. Permission is directional and revocable, and revoking stops mail that's already in flight.",
+        "A message no longer interrupts you mid-sentence. It waits until the recipient's input box is empty, so it can't be appended to a half-written prompt and sent along with it.",
+        "Delivered and read are now different things. A session acknowledges a message by id; failing that, the app confirms it from that session's own activity. Both are shown, marked differently.",
+        "Sessions can ask instead of guessing: who they're allowed to message, what's waiting for them, and whether an address is still valid. Each session also gets a permanent address that keeps working after its title changes, and can write to you directly with @\"user\".",
+        "Addressing a session that no longer exists now says so, and says who you can reach instead. It used to quietly reroute the message to the parent, which reported an unrelated problem and lost the thread.",
+        "A message sent to a session that isn't running now waits for you to reopen it, instead of failing.",
+        "The pause switch survives a restart. Behind it: per-pair and per-session rate limits, and a fleet-wide breaker that pauses everything rather than dropping messages.",
+        "Removing a session archives its mail instead of deleting it \u2014 still readable for a retention window you set in Settings (1 to 90 days).",
+        "The Arbiter stopped re-reading sessions that hadn't changed. A fleet sitting completely still could re-pay for the same explanations every few seconds."
+      ]
+    },
+    {
       "version": "0.21.0",
       "date": "2026-07-29",
       "critical": false,
