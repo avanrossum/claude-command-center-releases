@@ -1,6 +1,17 @@
 {
   "versions": [
     {
+      "version": "0.23.1",
+      "date": "2026-07-29",
+      "critical": false,
+      "features": [
+        "Sessions that were never really sessions no longer clutter the list. Claude Code briefly registers a session id in situations that never become a conversation \u2014 cancelling the /resume picker, for one \u2014 and those were being adopted as permanent, resumable-looking rows. One could even collect the name you meant for a real session you were creating at that moment. A row is now only offered as resumable if there is actually a conversation to resume.",
+        "Fixed a live session vanishing from the list when \"only show sessions managed here\" is on. If a session's id shifted while it ran, the app stopped recognising it as one of its own and hid it \u2014 so the session you were looking at wasn't in the sidebar at all.",
+        "The update dialog now says which install you chose. \"Install on quit\" looked identical to \"Install now\" while downloading, and the dismiss button still read \"Remind me later\" even though it neither stopped the download nor cancelled the update. It now reads Hide or Close, and says outright that closing the window won't change anything.",
+        "\"Install now\" works once an update has finished downloading. It was greyed out at exactly the point the update was ready, leaving no way to change your mind short of quitting by hand."
+      ]
+    },
+    {
       "version": "0.23.0",
       "date": "2026-07-29",
       "critical": false,
