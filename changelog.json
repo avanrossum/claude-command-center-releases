@@ -1,6 +1,17 @@
 {
   "versions": [
     {
+      "version": "0.24.0",
+      "date": "2026-07-30",
+      "critical": false,
+      "features": [
+        "CC Command Center is now open source. The repository is public, and releases live alongside the source instead of in a separate distribution repo. This update installs from the old location as usual; from here on the app looks in the new one.",
+        "New: an archive of every session that still exists but isn't in the sidebar, with the reason it isn't \u2014 never filed in a category, not run in a long time, or removed by you. Searchable by name and folder, and restoring one files it under a category, which is what puts it back in the list. Reachable from the button under \"New session\", or \u2318\u21e7A. Nothing is deleted from there; it's where sessions are found, not lost.",
+        "The update dialog now says which install you chose. \"Install on quit\" looked identical to \"Install now\" while downloading, and the dismiss button read \"Remind me later\" even though it neither stopped the download nor cancelled the update.",
+        "\"Install now\" works once an update has finished downloading, instead of being greyed out at exactly the point the update was ready."
+      ]
+    },
+    {
       "version": "0.23.2",
       "date": "2026-07-29",
       "critical": false,
