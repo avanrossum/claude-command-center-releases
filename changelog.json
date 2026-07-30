@@ -1,6 +1,14 @@
 {
   "versions": [
     {
+      "version": "0.24.1",
+      "date": "2026-07-30",
+      "critical": false,
+      "features": [
+        "Right-click menus stay on screen. Opening one near the bottom of the window pushed the lower options \u2014 rename, launch settings, spawn \u2014 off the edge, where they were unreachable with nothing to show they were there. The same fix covers the category editor and the rename popover, and a menu taller than the window now scrolls instead of overflowing."
+      ]
+    },
+    {
       "version": "0.24.0",
       "date": "2026-07-30",
       "critical": false,
