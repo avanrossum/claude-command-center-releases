@@ -1,6 +1,17 @@
 {
   "versions": [
     {
+      "version": "0.24.2-beta.1",
+      "date": "2026-08-03",
+      "critical": false,
+      "features": [
+        "BETA. When Claude Code can't resume a session it doesn't report an error \u2014 it quietly starts a cleared one instead, which reads as though your work was wiped. The app now recognises that and says so: what happened, that nothing was lost, and where the previous transcript still is. It also adopts the session that's actually running, so the name and category follow the work instead of staying on a session that can no longer be opened.",
+        "You can choose to carry the context across. \"Preload context\" tells the new session where the previous transcript is and asks it to read the tail to rebuild what you were working on \u2014 the path, not the file, since a large transcript would consume the very context it's meant to restore.",
+        "Your own statusLine runs again in sessions started by the app. The app installs its own to read context and rate-limit data, which is the only way that data is exposed \u2014 but it was replacing yours rather than chaining to it, so anything yours maintained silently stopped being maintained. Yours now runs with the same data; the terminal looks the same.",
+        "A finished session you've looked at stays cleared from the needs-you list. Opening it cleared the entry and a later scan brought it back, because the check compared a file timestamp that also moves for reasons that aren't a new completion."
+      ]
+    },
+    {
       "version": "0.24.1",
       "date": "2026-07-30",
       "critical": false,
