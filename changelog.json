@@ -1,6 +1,24 @@
 {
   "versions": [
     {
+      "version": "0.24.2-beta.2",
+      "date": "2026-09-19",
+      "critical": false,
+      "features": [
+        "BETA. Typing in the New session box is no longer possible to lose. Dragging the instructions box bigger by its corner grip and releasing the mouse outside the window used to close the whole dialog and throw away what you had written \u2014 nothing was clicked, it just vanished. Click-away and Cancel now ask before discarding anything you typed, in both the New session and Spawn dialogs.",
+        "Clean up piled-up sessions in two clicks instead of fourteen. Cmd-click picks rows, Shift-click takes a range, and right-click has \"Select all like this\" \u2014 every session in the same folder that isn't running, which is exactly the shape a headless tool leaves behind after a few dozen runs. Then Archive them.",
+        "Archive is new, and it is not the same as Remove. Removing a session deletes it; archiving hides it from the sidebar while keeping its name, category, edges and remembered launch settings intact, so Restore is one click and nothing has to be decided again. Remove is still there for debris, and now says plainly that it cannot be undone.",
+        "Background agents are visible. A session that has become a background agent is invisible to every other view in the app \u2014 it still looks like an ordinary resumable row, and clicking resume fails after the click with no warning before it. Agents now get their own listing, read through the documented `claude agents --json`, and can be taken over.",
+        "Voice input, new and worth treating as new. A dictate button in the New session instructions box and in the terminal bar records, transcribes on this Mac, and inserts the text. The terminal button inserts without sending, so you read it and press Enter yourself \u2014 speech recognition misfires, and an auto-sent wrong prompt costs a turn.",
+        "Two voice engines, because one of them needs no setup and the other is more accurate. Apple's on-device model works immediately on macOS 26 with nothing to download. Whisper is better on identifiers, file paths and CLI flags, and is used if you have it \u2014 install it with `brew install whisper-cpp`, then pick a model in Settings \u203a Voice. No model weights ship with the app; they are downloaded there or pointed at wherever you already keep them.",
+        "Your keyboard's dictation key still works anywhere and needs none of this. It is Apple's older engine and noticeably weaker on technical words, which is why the buttons exist.",
+        "This build asks for microphone access. That is a real capability the app did not have before, and it is only used while a dictate button is recording. Audio is transcribed on this Mac and never uploaded. macOS will ask for your consent the first time.",
+        "The window that shows your sessions is locked down. The app now refuses every browser permission it does not need \u2014 camera, location, notifications, clipboard reading \u2014 instead of granting them silently, and the packaged app enforces a content security policy. This went in before microphone access did, deliberately: the app renders markdown and HTML that sessions produce, and that is only safe when the surrounding permissions are closed.",
+        "Sessions that failed to resume are recognised and recovered (carried over from beta.1), your own statusLine runs again inside app-started sessions, and a needs-you entry you have already handled stops coming back on a later scan.",
+        "The recent-folders list in New session shows more than three entries \u2014 the column had space it was not using."
+      ]
+    },
+    {
       "version": "0.24.2-beta.1",
       "date": "2026-08-03",
       "critical": false,
